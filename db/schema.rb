@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2022_06_16_054912) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_stat_statements"
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
